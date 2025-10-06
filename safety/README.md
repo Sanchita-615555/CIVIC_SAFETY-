@@ -37,12 +37,12 @@ Database: MongoDB
 
 Frontend setup:
 
-npm install
-cd safety
-npm run dev 
+1. npm install
+2. cd safety
+3. npm run dev 
 
 Backend setup:
 
-cd backend 
-npm install
-node server.js
+1. cd backend 
+2. npm install
+3. node server.js
