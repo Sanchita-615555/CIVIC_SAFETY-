@@ -1,0 +1,14 @@
+# Root node_modules #
+node_modules/
+
+# Backend#
+backend/node_modules/
+backend/.env
+
+# Frontend#
+safety/node_modules/
+safety/.env
+
+
+
+backend/uploads/
