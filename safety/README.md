@@ -1,12 +1,55 @@
-# React + Vite
+Civic Safety:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Civic Safety is a web application designed to enhance community safety by allowing users to report incidents and access local safety resources. Built with the MERN stack (MongoDB, Express, React, Node.js).
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Homepage with overview of the platform
 
-## Expanding the ESLint configuration
+Ensuring Civic Well-Being: information about promoting safety and community awareness
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Keeping Our Community Safe:
+
+Report issues (name, location, type of emergency, description)
+
+Upload images or videos as evidence
+
+Submit incidents to the dashboard
+
+Live alerts for ongoing safety concerns
+
+Community engagement features
+
+Civic Safety Issues: paginated view of reported issues for easy navigation
+
+Stay Safe, Stay Alert Section:
+
+Displays reported incidents
+
+Users can filter and view details of incidents
+
+Get in Touch Section:
+
+Contact details including email, phone number, location, and social media links
+
+Admin panel to manage and review reports
+
+Tech Stack
+
+Frontend: React.js, HTML, CSS, JavaScript
+
+Backend: Node.js, Express.js
+
+Database: MongoDB
+
+Frontend setup:
+
+npm install
+cd safety
+npm run dev 
+
+Backend setup:
+
+cd backend 
+npm install
+node server.js
