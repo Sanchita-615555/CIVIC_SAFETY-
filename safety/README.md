@@ -35,13 +35,13 @@ Frontend: React.js, HTML, CSS, JavaScript
 Backend: Node.js, Express.js
 Database: MongoDB
 
-Frontend setup:
+Frontend run:
 
 1. npm install
 2. cd safety
 3. npm run dev 
 
-Backend setup:
+Backend run:
 
 1. cd backend 
 2. npm install
