@@ -10,7 +10,7 @@ import ContactPage from "./components/ContactPage";
 export default function App() {
   return (
     <div>
-      <Navbar />
+     
       <section id="home">
         <LandingSection />
       </section>
@@ -29,3 +29,4 @@ export default function App() {
     </div>
   );
 }
+
