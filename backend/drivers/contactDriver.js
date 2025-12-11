@@ -13,7 +13,7 @@ async function connectDB() {
   await client.connect();
   const db = client.db(process.env.DB_NAME); // database name//
   collection = db.collection(process.env.COLLECTION_NAME); // collection name//
-  console.log("MongoDB Atlas connected ✅");
+  console.log("MongoDB Atlas connected ");
 }
 connectDB();
 
@@ -46,7 +46,7 @@ router.post("/", upload.single("file"), async (req, res) => {
 
     await collection.insertOne(newContact);
 
-    res.json({ message: "Form submitted successfully ✅" });
+    res.json({ message: "Form submitted successfully " });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Error saving data" });
