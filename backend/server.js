@@ -9,8 +9,9 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://civic-safety-j82d.vercel.app",   
-      "http://localhost:3000"
+      "https://civic-safety-j82d.vercel.app",   // deployed frontend
+      "http://localhost:3000",                  // common React dev server
+      "http://localhost:5173"                   // laptop dev server (vite default)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
