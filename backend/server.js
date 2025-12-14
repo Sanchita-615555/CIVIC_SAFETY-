@@ -12,7 +12,12 @@ app.use(express.json());
 // Routes
 app.use("/api/contact", contactRouter);
 
-// Serve uploads folder (optional, if you want to access uploaded files)
+// Root route
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully!");
+});
+
+// Serve uploads folder
 app.use("/uploads", express.static("uploads"));
 
 const PORT = process.env.PORT || 5000;
