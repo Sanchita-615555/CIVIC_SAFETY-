@@ -17,10 +17,14 @@ const ContactPage = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        body: formData,
-      });
+      // ✅ Use deployed backend URL
+      const res = await fetch(
+        "https://civic-safety-2.onrender.com/api/contact",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
       const data = await res.json();
       alert(data.message);
       form.reset();
@@ -38,7 +42,7 @@ const ContactPage = () => {
     >
       {/* Page Heading */}
       <div className="mb-1 w-full flex justify-center flex-none">
-        <h1 className="text-xl md:text-2xl font-bold text-center font-style: italic;">
+        <h1 className="text-xl md:text-2xl font-bold text-center italic">
           STAY SAFE, STAY ALERT
         </h1>
       </div>
@@ -102,7 +106,8 @@ const ContactPage = () => {
 
             <button
               type="submit"
-              className="bg-blue-600 text-white py-0.5 rounded hover:bg-blue-700 mt-1 w-full flex-none text-sm h-6" >
+              className="bg-blue-600 text-white py-0.5 rounded hover:bg-blue-700 mt-1 w-full flex-none text-sm h-6"
+            >
               SUBMIT
             </button>
           </form>
@@ -115,35 +120,68 @@ const ContactPage = () => {
               Get in Touch
             </h3>
             <p className="flex items-center justify-center gap-1 flex-none text-xs">
-              <span>📧</span> 
-               <a href="mailto:info@civilsafety.com" className="hover:underline text-blue-600">info@civilsafety.com</a>
+              <span>📧</span>
+              <a
+                href="mailto:info@civilsafety.com"
+                className="hover:underline text-blue-600"
+              >
+                info@civilsafety.com
+              </a>
             </p>
-      
-{/* Phone */}
-<p className="flex items-center justify-center gap-1 flex-none text-xs">
-  <span>📞</span>
-  <a href="tel:+919876543210" className="hover:underline text-blue-600">
-    +91-98765-43210
-  </a>
-</p>
 
-{/* Location */}
-<p className="flex items-center justify-center gap-1 flex-none text-xs">
-  <span>📍</span>
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=1234+Safety+St,+Kolkata,+WB"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:underline text-blue-600">
-    1234 Safety St, Kolkata, WB
-  </a>
-</p>
+            {/* Phone */}
+            <p className="flex items-center justify-center gap-1 flex-none text-xs">
+              <span>📞</span>
+              <a
+                href="tel:+919876543210"
+                className="hover:underline text-blue-600"
+              >
+                +91-98765-43210
+              </a>
+            </p>
+
+            {/* Location */}
+            <p className="flex items-center justify-center gap-1 flex-none text-xs">
+              <span>📍</span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=1234+Safety+St,+Kolkata,+WB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-blue-600"
+              >
+                1234 Safety St, Kolkata, WB
+              </a>
+            </p>
 
             <div className="flex justify-center gap-3 mt-1 flex-none">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="/facebook.png" alt="Facebook" className="w-4 h-4" /></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><img src="/twitter.png" alt="Twitter" className="w-4 h-4" /></a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="/instagram.png" alt="Instagram" className="w-4 h-4" /></a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><img src="/linkedin.png" alt="LinkedIn" className="w-4 h-4" /></a>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/facebook.png" alt="Facebook" className="w-4 h-4" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/twitter.png" alt="Twitter" className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/instagram.png" alt="Instagram" className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/linkedin.png" alt="LinkedIn" className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
