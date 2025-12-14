@@ -17,7 +17,7 @@ const ContactPage = () => {
     }
 
     try {
-      // ✅ Use deployed backend URL
+      // Use deployed backend URL
       const res = await fetch(
         "https://civic-safety-2.onrender.com/api/contact",
         {
