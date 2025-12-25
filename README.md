@@ -39,3 +39,6 @@ Backend run:
 1. cd backend
 2. npm install
 3. node server.js
+
+
+Project link: https://lnkd.in/gGvH8xHe
