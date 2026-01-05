@@ -54,7 +54,7 @@ const ContactPage = () => {
           {/* Emergency Numbers */}
           <div className="flex justify-between gap-1 flex-none">
             <div className="flex flex-col items-center bg-blue-100 p-1 rounded flex-1 text-center text-xs">
-              <span className="text-lg mb-0.5">👮‍♂️</span>
+              <span className="text-lg mb-0.5">👮‍♂</span>
               <p className="font-semibold text-sm">Police</p>
               <p className="text-xs">112</p>
             </div>
@@ -191,7 +191,7 @@ const ContactPage = () => {
               type="file"
               id="fileUpload"
               name="file"
-              accept="image/*,video/*"
+              accept="image/,video/"
               className="text-xs w-full cursor-pointer"
             />
           </div>
