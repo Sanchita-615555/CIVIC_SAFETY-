@@ -5,42 +5,39 @@ function LandingSection() {
   return (
     <section
       id="home"
-      className="min-h-screen w-full bg-[url('/landing.jpg')] bg-cover bg-center relative overflow-hidden"
+      className="w-full h-screen flex flex-row items-center
+                 bg-gradient-to-b from-blue-100 via-blue-50 to-white
+                 relative pt-8 px-3"
     >
       {/* NAVBAR */}
-      <div className="w-full">
+      <div className="w-full absolute top-0 left-0 z-50">
         <Navbar />
       </div>
 
-      {/* HERO CONTENT */}
-      <div
-        className="w-full flex flex-col justify-center items-start
-                   px-4 sm:px-6 md:px-10
-                   pt-8 sm:pt-12 md:pt-16 lg:pt-20 pb-10"
-      >
-        {/* HEADING */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-          CIVIC SAFETY,
-          <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl
-                           text-blue-900 italic tracking-wide mt-1 md:mt-2">
-            OUR PRIORITY
-          </span>
-        </h1>
+      {/* LEFT SIDE: TEXT */}
+      <div className="w-1/2 flex flex-col justify-center pl-2">
+     <h1 className="text-3xl font-bold text-gray-900 mb-1">
+  CIVIC SAFETY
+</h1>
 
-        {/* PARAGRAPH */}
-        <p className="text-black-700 text-[12px] sm:text-sm md:text-base lg:text-lg
-                      leading-relaxed text-left
-                      max-w-[260px] sm:max-w-sm md:max-w-md lg:max-w-lg mt-2 md:mt-4">
-          Ensuring a secure community for everyone.<br />
-          Awareness, prevention, and action together.<br />
-          Your safety, our shared responsibility.<br />
-          Join hands with us to make your neighborhood<br />
-          safer. Learn how to prevent issues and report<br />
-          them effectively. Together, we can make a<br />
-          difference in our community.
+<h2 className="text-2xl font-semibold text-blue-900 mb-3 ml-8">
+  OUR PRIORITY
+</h2>
+ <p className="text-sm text-gray-700 max-w-sm leading-relaxed">
+          Ensuring a secure community for everyone through awareness,
+          prevention, and collective responsibility. Together we work
+          towards a safer and more prepared society. 
         </p>
       </div>
-    </section>
+{/* RIGHT SIDE: IMAGE */}
+<div className="w-1/2 flex justify-end items-center pr-5 mt-8">
+  <img
+    src="/landing.jpg"
+    alt="Civic Safety"
+    className="w-64 h-50 object-cover rounded-lg shadow-md translate-x-5"
+  />
+</div>
+  </section>
   );
 }
 
