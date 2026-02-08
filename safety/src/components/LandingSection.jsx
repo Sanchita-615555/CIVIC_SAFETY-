@@ -20,10 +20,12 @@ function LandingSection() {
       <Navbar />
 
       {/* ===== TEXT SECTION : FULL SCREEN ===== */}
-      <div className="min-h-screen bg-blue-50 flex items-start pt-6 md:pt-12">
+      {/* ===== TEXT SECTION ===== */}
+<div className="bg-blue-50 flex items-start pt-6 md:pt-12 pb-10 md:pb-16">
 
-        <div className="px-4 sm:px-10 md:px-24 w-full">
-          <div className="max-w-3xl mx-auto">
+  <div className="px-4 sm:px-10 md:px-24 w-full">
+    <div className="max-w-3xl mx-auto">
+
 
             <span className="
               text-xs
