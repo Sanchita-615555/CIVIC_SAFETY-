@@ -7,7 +7,7 @@ function Features() {
         min-h-screen
         bg-gradient-to-b
         from-yellow-300
-        to-white
+        to-yellow-200
         flex
         flex-col
         justify-center
