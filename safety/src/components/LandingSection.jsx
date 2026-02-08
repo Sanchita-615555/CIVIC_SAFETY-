@@ -17,10 +17,9 @@ function LandingSection() {
     <section id="home" className="w-full bg-white overflow-hidden">
       <Navbar />
 
-      {/* ===== HERO SECTION ===== */}
-      <div className="bg-blue-50 min-h-screen flex flex-col">
+      {/* ===== TEXT SECTION (NO FORCE HEIGHT) ===== */}
+      <div className="bg-blue-50">
 
-        {/* ===== TEXT ===== */}
         <div
           className="
             px-4
@@ -28,22 +27,13 @@ function LandingSection() {
             md:px-16
             lg:px-24
             pt-6
-            md:pt-12
-            pb-4          /* 🔴 bottom gap কম */
+            md:pt-10
+            pb-6     /* ✅ controlled spacing */
           "
         >
           <div className="max-w-4xl">
 
-            <span className="
-              block
-              text-xs
-              sm:text-sm
-              lg:text-base
-              xl:text-lg
-              font-semibold
-              text-blue-800
-              tracking-wide
-            ">
+            <span className="block text-xs sm:text-sm lg:text-base xl:text-lg font-semibold text-blue-800 tracking-wide">
               CIVIC SAFETY & SOCIAL RESPONSIBILITY
             </span>
 
@@ -80,22 +70,14 @@ function LandingSection() {
               create disciplined communities.
             </p>
 
-            {/* ===== BUTTONS ===== */}
             <div className="mt-5 flex gap-4 flex-wrap">
               <a
                 href="#contact"
                 className="
-                  px-10
-                  py-3
-                  text-sm
-                  md:text-base
-                  lg:text-lg
-                  xl:text-xl
-                  bg-blue-900
-                  text-white
-                  rounded-md
-                  hover:bg-blue-800
-                  transition
+                  px-10 py-3
+                  text-sm md:text-base lg:text-lg xl:text-xl
+                  bg-blue-900 text-white rounded-md
+                  hover:bg-blue-800 transition
                 "
               >
                 Get Involved
@@ -104,18 +86,10 @@ function LandingSection() {
               <a
                 href="#about"
                 className="
-                  px-10
-                  py-3
-                  text-sm
-                  md:text-base
-                  lg:text-lg
-                  xl:text-xl
-                  border
-                  border-blue-900
-                  text-blue-900
-                  rounded-md
-                  hover:bg-blue-100
-                  transition
+                  px-10 py-3
+                  text-sm md:text-base lg:text-lg xl:text-xl
+                  border border-blue-900 text-blue-900 rounded-md
+                  hover:bg-blue-100 transition
                 "
               >
                 Learn More
@@ -123,58 +97,39 @@ function LandingSection() {
             </div>
           </div>
         </div>
-
-        {/* ===== IMAGE SLIDER (MOBILE – SAME SCREEN) ===== */}
-        <div className="relative w-full mt-3 md:hidden">
-          <img
-            src={images[current]}
-            alt="Civic responsibility activity"
-            className="w-full h-[200px] sm:h-[240px] object-cover"
-          />
-
-          <button
-            onClick={prevImage}
-            className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full"
-          >
-            ❮
-          </button>
-
-          <button
-            onClick={nextImage}
-            className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full"
-          >
-            ❯
-          </button>
-        </div>
       </div>
 
-      {/* ===== IMAGE SLIDER (DESKTOP – NEXT SECTION) ===== */}
-      <div className="relative w-full hidden md:block mt-0">
+      {/* ===== IMAGE SLIDER ===== */}
+      <div className="relative w-full">
+
         <img
           src={images[current]}
           alt="Civic responsibility activity"
           className="
             w-full
-            h-[400px]
-            lg:h-[500px]
-            xl:h-[600px]
+            h-[220px]
+            sm:h-[280px]
+            md:h-[380px]
+            lg:h-[480px]
+            xl:h-[580px]
             object-cover
           "
         />
 
         <button
           onClick={prevImage}
-          className="absolute top-1/2 left-6 -translate-y-1/2 bg-black/50 text-white px-4 py-3 rounded-full"
+          className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white px-4 py-3 rounded-full"
         >
           ❮
         </button>
 
         <button
           onClick={nextImage}
-          className="absolute top-1/2 right-6 -translate-y-1/2 bg-black/50 text-white px-4 py-3 rounded-full"
+          className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white px-4 py-3 rounded-full"
         >
           ❯
         </button>
+
       </div>
     </section>
   );
