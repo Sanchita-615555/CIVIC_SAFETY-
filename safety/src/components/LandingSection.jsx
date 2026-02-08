@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 
 function LandingSection() {
-
   const images = ["/1st.jpg", "/2nd.png", "/3rd.jpg"];
   const [current, setCurrent] = useState(0);
 
@@ -16,18 +15,18 @@ function LandingSection() {
 
   return (
     <section id="home" className="w-full bg-white">
-
       <Navbar />
 
-      {/* ===== TEXT SECTION : FULL SCREEN ===== */}
-      {/* ===== TEXT SECTION ===== */}
-<div className="bg-blue-50 flex items-start pt-6 md:pt-12 pb-10 md:pb-16">
+      {/* ===== HERO SECTION ===== */}
+      <div className="bg-blue-50 min-h-screen flex flex-col md:block">
 
-  <div className="px-4 sm:px-10 md:px-24 w-full">
-    <div className="max-w-3xl mx-auto">
+        {/* ===== TEXT ===== */}
+        <div className="px-4 sm:px-6 md:px-16 lg:px-24 pt-6 md:pt-14">
 
+          <div className="max-w-4xl md:max-w-none">
 
             <span className="
+              block
               text-xs
               sm:text-sm
               lg:text-base
@@ -40,7 +39,7 @@ function LandingSection() {
             </span>
 
             <h1 className="
-              mt-4
+              mt-3
               text-3xl
               sm:text-4xl
               md:text-5xl
@@ -65,17 +64,19 @@ function LandingSection() {
               xl:text-2xl
               text-gray-700
               leading-relaxed
+              max-w-3xl
             ">
               A safe society is built when citizens and authorities work together
               with responsibility and trust. Active social work and mutual help
               create disciplined communities.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-4">
+            {/* ===== BUTTONS ===== */}
+            <div className="mt-6 flex gap-4 flex-wrap">
               <a
                 href="#contact"
                 className="
-                  px-7
+                  px-10
                   py-3
                   text-sm
                   md:text-base
@@ -94,7 +95,7 @@ function LandingSection() {
               <a
                 href="#about"
                 className="
-                  px-7
+                  px-10
                   py-3
                   text-sm
                   md:text-base
@@ -111,22 +112,41 @@ function LandingSection() {
                 Learn More
               </a>
             </div>
-
           </div>
+        </div>
+
+        {/* ===== IMAGE SLIDER (MOBILE SAME SCREEN) ===== */}
+        <div className="relative w-full mt-6 md:hidden">
+          <img
+            src={images[current]}
+            alt="Civic responsibility activity"
+            className="w-full h-[200px] sm:h-[240px] object-cover"
+          />
+
+          <button
+            onClick={prevImage}
+            className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full"
+          >
+            ❮
+          </button>
+
+          <button
+            onClick={nextImage}
+            className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full"
+          >
+            ❯
+          </button>
         </div>
       </div>
 
-      {/* ===== IMAGE SLIDER : NEXT SCREEN ===== */}
-      <div className="relative w-full">
-
+      {/* ===== IMAGE SLIDER (DESKTOP NEXT SECTION) ===== */}
+      <div className="relative w-full hidden md:block">
         <img
           src={images[current]}
           alt="Civic responsibility activity"
           className="
             w-full
-            h-[240px]
-            sm:h-[300px]
-            md:h-[420px]
+            h-[420px]
             lg:h-[520px]
             xl:h-[620px]
             object-cover
@@ -135,44 +155,18 @@ function LandingSection() {
 
         <button
           onClick={prevImage}
-          className="
-            absolute
-            top-1/2
-            left-4
-            -translate-y-1/2
-            bg-black/50
-            text-white
-            px-4
-            py-3
-            rounded-full
-            hover:bg-black/70
-            transition
-          "
+          className="absolute top-1/2 left-6 -translate-y-1/2 bg-black/50 text-white px-4 py-3 rounded-full"
         >
           ❮
         </button>
 
         <button
           onClick={nextImage}
-          className="
-            absolute
-            top-1/2
-            right-4
-            -translate-y-1/2
-            bg-black/50
-            text-white
-            px-4
-            py-3
-            rounded-full
-            hover:bg-black/70
-            transition
-          "
+          className="absolute top-1/2 right-6 -translate-y-1/2 bg-black/50 text-white px-4 py-3 rounded-full"
         >
           ❯
         </button>
-
       </div>
-
     </section>
   );
 }
