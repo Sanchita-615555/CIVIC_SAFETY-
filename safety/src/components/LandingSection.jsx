@@ -3,24 +3,15 @@ import Navbar from "./Navbar";
 
 function LandingSection() {
 
-  const images = [
-    "/1st.jpg",
-    "/2nd.png",
-    "/3rd.jpg",
-  ];
-
+  const images = ["/1st.jpg", "/2nd.png", "/3rd.jpg"];
   const [current, setCurrent] = useState(0);
 
   const prevImage = () => {
-    setCurrent(prev =>
-      prev === 0 ? images.length - 1 : prev - 1
-    );
+    setCurrent(prev => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const nextImage = () => {
-    setCurrent(prev =>
-      prev === images.length - 1 ? 0 : prev + 1
-    );
+    setCurrent(prev => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -28,12 +19,8 @@ function LandingSection() {
 
       <Navbar />
 
-      {/* ===== TEXT + BUTTON : ONE FULL SCREEN ===== */}
-      
-        <div className="bg-blue-50 flex items-start pt-1 md:pt-6">
-
-        
-
+      {/* ===== TEXT SECTION (FULL SCREEN, TOP ALIGNED) ===== */}
+      <div className="min-h-screen bg-blue-50 flex items-start pt-4 md:pt-10">
 
         <div className="px-4 md:px-24 w-full">
           <div className="max-w-2xl mx-auto">
@@ -42,20 +29,20 @@ function LandingSection() {
               CIVIC SAFETY & SOCIAL RESPONSIBILITY
             </span>
 
-            <h1 className="mt-0 text-2xl md:text-2xl font-bold text-gray-900">
+            <h1 className="mt-1 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               Civic Safety
               <span className="block text-blue-900">
                 Starts With Us
               </span>
             </h1>
 
-            <p className="mt-1 text-sm md:text-base text-gray-700 leading-relaxed">
+            <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
               A safe society is built when citizens and authorities work together
               with responsibility and trust. Active social work and mutual help
               create disciplined communities.
             </p>
 
-            <div className="mt-1 flex gap-3">
+            <div className="mt-3 flex gap-3">
               <a
                 href="#contact"
                 className="px-5 py-2 text-sm bg-blue-900 text-white rounded-md hover:bg-blue-800 transition"
@@ -75,7 +62,7 @@ function LandingSection() {
         </div>
       </div>
 
-      {/* ===== IMAGE SLIDER : NEXT SCROLL ===== */}
+      {/* ===== IMAGE SLIDER (NEXT SCREEN) ===== */}
       <div className="relative w-full">
 
         <img
@@ -83,11 +70,11 @@ function LandingSection() {
           alt="Civic responsibility activity"
           className="
             w-full
-            h-[200px]
-            sm:h-[240px]
-            md:h-[320px]
-            lg:h-[420px]
-            xl:h-[480px]
+            h-[220px]
+            sm:h-[260px]
+            md:h-[360px]
+            lg:h-[440px]
+            xl:h-[500px]
             object-cover
           "
         />
