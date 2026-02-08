@@ -19,17 +19,18 @@ function LandingSection() {
 
       <Navbar />
 
-      {/* ===== TEXT SECTION : FULL SCREEN ===== */}
-      <div className="min-h-screen bg-blue-50 flex items-start pt-6 md:pt-12">
+      {/* ===== HERO TEXT SECTION ===== */}
+      <div className="min-h-screen bg-blue-50 flex items-start pt-8 md:pt-14">
 
         <div className="px-4 sm:px-10 md:px-24 w-full">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
 
             <span className="
-              text-xs
-              sm:text-sm
-              lg:text-base
-              xl:text-lg
+              text-sm
+              md:text-base
+              lg:text-lg
+              xl:text-xl
+              2xl:text-2xl
               font-semibold
               text-blue-800
               tracking-wide
@@ -38,13 +39,14 @@ function LandingSection() {
             </span>
 
             <h1 className="
-              mt-4
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              lg:text-6xl
-              xl:text-7xl
-              font-bold
+              mt-6
+              text-4xl
+              sm:text-5xl
+              md:text-6xl
+              lg:text-7xl
+              xl:text-8xl
+              2xl:text-9xl
+              font-extrabold
               text-gray-900
               leading-tight
             ">
@@ -55,12 +57,13 @@ function LandingSection() {
             </h1>
 
             <p className="
-              mt-4
-              text-sm
-              sm:text-base
-              md:text-lg
-              lg:text-xl
-              xl:text-2xl
+              mt-6
+              text-base
+              sm:text-lg
+              md:text-xl
+              lg:text-2xl
+              xl:text-3xl
+              2xl:text-4xl
               text-gray-700
               leading-relaxed
             ">
@@ -69,19 +72,20 @@ function LandingSection() {
               create disciplined communities.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-6">
               <a
                 href="#contact"
                 className="
-                  px-7
-                  py-3
-                  text-sm
-                  md:text-base
-                  lg:text-lg
-                  xl:text-xl
+                  px-10
+                  py-4
+                  text-base
+                  md:text-lg
+                  lg:text-xl
+                  xl:text-2xl
+                  2xl:text-3xl
                   bg-blue-900
                   text-white
-                  rounded-md
+                  rounded-lg
                   hover:bg-blue-800
                   transition
                 "
@@ -92,16 +96,17 @@ function LandingSection() {
               <a
                 href="#about"
                 className="
-                  px-7
-                  py-3
-                  text-sm
-                  md:text-base
-                  lg:text-lg
-                  xl:text-xl
+                  px-10
+                  py-4
+                  text-base
+                  md:text-lg
+                  lg:text-xl
+                  xl:text-2xl
+                  2xl:text-3xl
                   border
                   border-blue-900
                   text-blue-900
-                  rounded-md
+                  rounded-lg
                   hover:bg-blue-100
                   transition
                 "
@@ -114,7 +119,7 @@ function LandingSection() {
         </div>
       </div>
 
-      {/* ===== IMAGE SLIDER : NEXT SCREEN ===== */}
+      {/* ===== IMAGE SLIDER SECTION ===== */}
       <div className="relative w-full">
 
         <img
@@ -122,11 +127,12 @@ function LandingSection() {
           alt="Civic responsibility activity"
           className="
             w-full
-            h-[240px]
-            sm:h-[300px]
-            md:h-[420px]
-            lg:h-[520px]
-            xl:h-[620px]
+            h-[260px]
+            sm:h-[340px]
+            md:h-[460px]
+            lg:h-[560px]
+            xl:h-[680px]
+            2xl:h-[800px]
             object-cover
           "
         />
@@ -136,12 +142,12 @@ function LandingSection() {
           className="
             absolute
             top-1/2
-            left-4
+            left-6
             -translate-y-1/2
             bg-black/50
             text-white
-            px-4
-            py-3
+            px-5
+            py-4
             rounded-full
             hover:bg-black/70
             transition
@@ -155,12 +161,12 @@ function LandingSection() {
           className="
             absolute
             top-1/2
-            right-4
+            right-6
             -translate-y-1/2
             bg-black/50
             text-white
-            px-4
-            py-3
+            px-5
+            py-4
             rounded-full
             hover:bg-black/70
             transition
