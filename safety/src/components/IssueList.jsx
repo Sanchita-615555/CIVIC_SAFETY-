@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function IssueList() {
   const issues = [
     { id: 1, title: "Potholes", desc: "Road potholes need repair", img: "potholes.jpg" },
-    { id: 2, title: "Murders", desc: "Unsafe areas must be reported", img: "murder.jpg" },
+    { id: 2, title: "Murders", desc: "Unsafe areas", img: "murder.jpg" },
     { id: 3, title: "Garbage", desc: "Overflowing garbage bins", img: "garbage.jpg" },
     { id: 4, title: "Street Lights", desc: "Broken street lights cause", img: "streetlight.jpg" },
     { id: 5, title: "Traffic-Jam", desc: "Heavy traffic congestion", img: "traffic.jpg" },
