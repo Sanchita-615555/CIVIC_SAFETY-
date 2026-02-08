@@ -1,11 +1,11 @@
-import React, { useState } from "react"; // for useState //
+import React, { useState } from "react";
 
 function IssueList() {
   const issues = [
     { id: 1, title: "Potholes", desc: "Road potholes need repair", img: "potholes.jpg" },
     { id: 2, title: "Murders", desc: "Unsafe areas must be reported", img: "murder.jpg" },
     { id: 3, title: "Garbage", desc: "Overflowing garbage bins", img: "garbage.jpg" },
-    { id: 4, title: "Street Lights", desc: "Broken street lights cause issues", img: "streetlight.jpg" },
+    { id: 4, title: "Street Lights", desc: "Broken street lights cause", img: "streetlight.jpg" },
     { id: 5, title: "Traffic-Jam", desc: "Heavy traffic congestion", img: "traffic.jpg" },
     { id: 6, title: "Water-Leakage", desc: "Water pipelines leaking", img: "water.jpg" },
     { id: 7, title: "Dustbin", desc: "Unmanaged dustbins", img: "dustbin.jpg" },
@@ -27,37 +27,38 @@ function IssueList() {
   return (
     <section
       id="issues"
-      className="p-4 md:p-6 bg-blue-100 flex flex-col justify-between min-h-screen"
+      className="p-4 md:p-6 lg:p-10 bg-blue-100 flex flex-col justify-between min-h-screen"
     >
       {/* Heading */}
       <div>
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-1">
+        <h1 className="text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold text-center mb-2">
           Civic Safety Issues
         </h1>
-        <p className="text-center mb-3 text-xs md:text-sm lg:text-base text-gray-700">
+        <p className="text-center mb-5 text-xs md:text-sm lg:text-lg xl:text-xl text-gray-700">
           Stay updated with latest reported issues
         </p>
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 gap-3 max-w-6xl mx-auto flex-grow">
+      <div className="grid grid-cols-2 gap-4 max-w-7xl mx-auto flex-grow">
         {currentItems.map((issue) => (
           <div
             key={issue.id}
             className="
               border
-              rounded-md
+              rounded-xl
               shadow
               bg-white
-              hover:shadow-lg
+              hover:shadow-2xl
+              transition
               flex
               flex-col
               w-full
-              h-32
-              md:h-36
-              lg:h-44
-              xl:h-48
-              transition
+              h-36
+              md:h-44
+              lg:h-56
+              xl:h-64
+              2xl:h-72
             "
           >
             <img
@@ -65,20 +66,21 @@ function IssueList() {
               alt={issue.title}
               className="
                 w-full
-                h-20
-                md:h-24
-                lg:h-28
-                xl:h-32
+                h-24
+                md:h-28
+                lg:h-36
+                xl:h-40
+                2xl:h-44
                 object-cover
-                rounded-t-md
+                rounded-t-xl
               "
             />
 
-            <div className="p-2 text-center flex-grow flex flex-col justify-center">
-              <h2 className="text-sm md:text-base lg:text-lg font-semibold">
+            <div className="p-3 text-center flex-grow flex flex-col justify-center">
+              <h2 className="text-sm md:text-lg lg:text-xl xl:text-2xl font-semibold">
                 {issue.title}
               </h2>
-              <p className="text-[10px] md:text-xs lg:text-sm text-blue-900">
+              <p className="text-[11px] md:text-sm lg:text-base xl:text-lg text-blue-900">
                 {issue.desc}
               </p>
             </div>
@@ -87,18 +89,18 @@ function IssueList() {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center mt-4 space-x-2">
+      <div className="flex justify-center mt-6 space-x-3">
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i + 1}
             onClick={() => setCurrentPage(i + 1)}
             className={`
-              px-3 py-1
-              text-xs md:text-sm
+              px-4 py-2
+              text-sm lg:text-base
               rounded
               ${
                 currentPage === i + 1
-                  ? "bg-blue-500 text-white"
+                  ? "bg-blue-600 text-white"
                   : "bg-gray-200 hover:bg-gray-300"
               }
             `}
