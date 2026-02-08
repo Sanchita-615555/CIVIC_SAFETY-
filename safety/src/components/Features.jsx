@@ -6,7 +6,7 @@ function Features() {
       className="
         min-h-screen
         bg-gradient-to-b
-        from-blue-50
+        from-yellow-300
         to-white
         flex
         flex-col
