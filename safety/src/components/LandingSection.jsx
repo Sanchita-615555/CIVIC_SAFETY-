@@ -18,7 +18,7 @@ function LandingSection() {
       id="home"
       className="
         w-full bg-white
-        h-screen md:h-auto
+        min-h-screen
         overflow-hidden
         flex flex-col
       "
@@ -26,8 +26,12 @@ function LandingSection() {
       <Navbar />
 
       {/* ================= TEXT SECTION ================= */}
-      <div className="bg-blue-50 px-4 sm:px-6 md:px-16 lg:px-24 pt-4 md:pt-12">
-
+      <div className="
+        bg-blue-50
+        px-4 sm:px-6 md:px-16 lg:px-24
+        pt-4 md:pt-12
+        flex-shrink-0
+      ">
         <span className="block text-xs sm:text-sm lg:text-base xl:text-lg font-semibold text-blue-800 tracking-wide">
           CIVIC SAFETY & SOCIAL RESPONSIBILITY
         </span>
@@ -77,8 +81,19 @@ function LandingSection() {
         </div>
       </div>
 
-      {/* ================= IMAGE SLIDER (TAKES REST HEIGHT) ================= */}
-      <div className="relative flex-1 mt-3 md:mt-10">
+      {/* ================= IMAGE SLIDER ================= */}
+      <div
+  className="
+    relative
+    w-full
+    mt-2            /* very small gap */
+    md:mt-6         /* desktop e slight comfortable gap */
+    min-h-[240px]
+    sm:min-h-[260px]
+    md:min-h-[420px]
+    flex-grow
+  "
+>
 
         <img
           src={images[current]}
@@ -99,7 +114,6 @@ function LandingSection() {
         >
           ❯
         </button>
-
       </div>
     </section>
   );
