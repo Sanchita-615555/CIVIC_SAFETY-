@@ -14,16 +14,25 @@ function LandingSection() {
   };
 
   return (
-    <section id="home" className="w-full bg-white">
+    <section id="home" className="w-full bg-white overflow-hidden">
       <Navbar />
 
       {/* ===== HERO SECTION ===== */}
-      <div className="bg-blue-50 min-h-screen flex flex-col md:block">
+      <div className="bg-blue-50 min-h-screen flex flex-col">
 
         {/* ===== TEXT ===== */}
-        <div className="px-4 sm:px-6 md:px-16 lg:px-24 pt-6 md:pt-14">
-
-          <div className="max-w-4xl md:max-w-none">
+        <div
+          className="
+            px-4
+            sm:px-6
+            md:px-16
+            lg:px-24
+            pt-6
+            md:pt-12
+            pb-4          /* 🔴 bottom gap কম */
+          "
+        >
+          <div className="max-w-4xl">
 
             <span className="
               block
@@ -72,7 +81,7 @@ function LandingSection() {
             </p>
 
             {/* ===== BUTTONS ===== */}
-            <div className="mt-6 flex gap-4 flex-wrap">
+            <div className="mt-5 flex gap-4 flex-wrap">
               <a
                 href="#contact"
                 className="
@@ -115,8 +124,8 @@ function LandingSection() {
           </div>
         </div>
 
-        {/* ===== IMAGE SLIDER (MOBILE SAME SCREEN) ===== */}
-        <div className="relative w-full mt-6 md:hidden">
+        {/* ===== IMAGE SLIDER (MOBILE – SAME SCREEN) ===== */}
+        <div className="relative w-full mt-3 md:hidden">
           <img
             src={images[current]}
             alt="Civic responsibility activity"
@@ -139,16 +148,16 @@ function LandingSection() {
         </div>
       </div>
 
-      {/* ===== IMAGE SLIDER (DESKTOP NEXT SECTION) ===== */}
-      <div className="relative w-full hidden md:block">
+      {/* ===== IMAGE SLIDER (DESKTOP – NEXT SECTION) ===== */}
+      <div className="relative w-full hidden md:block mt-0">
         <img
           src={images[current]}
           alt="Civic responsibility activity"
           className="
             w-full
-            h-[420px]
-            lg:h-[520px]
-            xl:h-[620px]
+            h-[400px]
+            lg:h-[500px]
+            xl:h-[600px]
             object-cover
           "
         />
