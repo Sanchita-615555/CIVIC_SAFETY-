@@ -19,40 +19,41 @@ function LandingSection() {
 
       <Navbar />
 
-      {/* ===== TEXT SECTION (FULL SCREEN, TOP ALIGNED) ===== */}
-      <div className="min-h-screen bg-blue-50 flex items-start pt-4 md:pt-10">
+      {/* ===== HERO SECTION : TEXT + IMAGE SAME SCREEN ===== */}
+      <div className="min-h-screen bg-blue-50 flex flex-col md:flex-row items-start pt-6 md:pt-14">
 
-        <div className="px-4 md:px-24 w-full">
-          <div className="max-w-2xl mx-auto">
+        {/* ===== TEXT PART ===== */}
+        <div className="px-4 md:px-24 w-full md:w-1/2">
+          <div className="max-w-xl">
 
-            <span className="text-xs font-semibold text-blue-800 tracking-wide">
+            <span className="text-xs md:text-sm font-semibold text-blue-800 tracking-wide">
               CIVIC SAFETY & SOCIAL RESPONSIBILITY
             </span>
 
-            <h1 className="mt-1 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
               Civic Safety
               <span className="block text-blue-900">
                 Starts With Us
               </span>
             </h1>
 
-            <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+            <p className="mt-3 text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
               A safe society is built when citizens and authorities work together
               with responsibility and trust. Active social work and mutual help
               create disciplined communities.
             </p>
 
-            <div className="mt-3 flex gap-3">
+            <div className="mt-4 flex gap-4">
               <a
                 href="#contact"
-                className="px-5 py-2 text-sm bg-blue-900 text-white rounded-md hover:bg-blue-800 transition"
+                className="px-6 py-2 text-sm md:text-base bg-blue-900 text-white rounded-md hover:bg-blue-800 transition"
               >
                 Get Involved
               </a>
 
               <a
                 href="#about"
-                className="px-5 py-2 text-sm border border-blue-900 text-blue-900 rounded-md hover:bg-blue-50 transition"
+                className="px-6 py-2 text-sm md:text-base border border-blue-900 text-blue-900 rounded-md hover:bg-blue-50 transition"
               >
                 Learn More
               </a>
@@ -60,43 +61,43 @@ function LandingSection() {
 
           </div>
         </div>
-      </div>
 
-      {/* ===== IMAGE SLIDER (NEXT SCREEN) ===== */}
-      <div className="relative w-full">
+        {/* ===== IMAGE SLIDER ===== */}
+        <div className="relative w-full md:w-1/2 mt-6 md:mt-0 px-4 md:px-0">
 
-        <img
-          src={images[current]}
-          alt="Civic responsibility activity"
-          className="
-            w-full
-            h-[220px]
-            sm:h-[260px]
-            md:h-[360px]
-            lg:h-[440px]
-            xl:h-[500px]
-            object-cover
-          "
-        />
+          <img
+            src={images[current]}
+            alt="Civic responsibility activity"
+            className="
+              w-full
+              h-[220px]
+              sm:h-[280px]
+              md:h-[380px]
+              lg:h-[460px]
+              object-cover
+              rounded-lg
+            "
+          />
 
-        <button
-          onClick={prevImage}
-          className="absolute top-1/2 left-4 -translate-y-1/2
-                     bg-black/50 text-white px-3 py-2 rounded-full
-                     hover:bg-black/70 transition"
-        >
-          ❮
-        </button>
+          <button
+            onClick={prevImage}
+            className="absolute top-1/2 left-4 -translate-y-1/2
+                       bg-black/50 text-white px-3 py-2 rounded-full
+                       hover:bg-black/70 transition"
+          >
+            ❮
+          </button>
 
-        <button
-          onClick={nextImage}
-          className="absolute top-1/2 right-4 -translate-y-1/2
-                     bg-black/50 text-white px-3 py-2 rounded-full
-                     hover:bg-black/70 transition"
-        >
-          ❯
-        </button>
+          <button
+            onClick={nextImage}
+            className="absolute top-1/2 right-4 -translate-y-1/2
+                       bg-black/50 text-white px-3 py-2 rounded-full
+                       hover:bg-black/70 transition"
+          >
+            ❯
+          </button>
 
+        </div>
       </div>
 
     </section>
