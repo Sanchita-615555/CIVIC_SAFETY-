@@ -23,7 +23,7 @@ function Navbar() {
     <nav
       className="w-full
                  flex items-center justify-between
-                 py-3 px-6
+                 py-1 px-6
                  bg-blue-200/90 backdrop-blur-md
                  shadow-md"
     >
