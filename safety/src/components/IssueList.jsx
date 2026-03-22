@@ -27,60 +27,48 @@ function IssueList() {
   return (
     <section
       id="issues"
-      className="p-4 md:p-6 lg:p-10 bg-blue-100 flex flex-col justify-between min-h-screen"
+      className="bg-blue-100 px-6 lg:px-16 py-12 min-h-screen flex flex-col"
     >
       {/* Heading */}
-      <div>
-        <h1 className="text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold text-center mb-2">
+      <div className="text-center mb-10">
+        <h1 className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold">
           Civic Safety Issues
         </h1>
-        <p className="text-center mb-5 text-xs md:text-sm lg:text-lg xl:text-xl text-gray-700">
+        <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-700 mt-2">
           Stay updated with latest reported issues
         </p>
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 gap-4 max-w-7xl mx-auto flex-grow">
+      <div className="
+        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+        gap-6
+        w-full max-w-[1600px] mx-auto flex-grow
+      ">
         {currentItems.map((issue) => (
           <div
             key={issue.id}
             className="
-              border
-              rounded-xl
-              shadow
               bg-white
-              hover:shadow-2xl
-              transition
-              flex
-              flex-col
-              w-full
-              h-36
-              md:h-44
-              lg:h-56
-              xl:h-64
-              2xl:h-72
+              rounded-2xl
+              shadow-lg
+              hover:shadow-2xl hover:-translate-y-2
+              transition-all duration-300
+              flex flex-col overflow-hidden
             "
           >
             <img
               src={issue.img}
               alt={issue.title}
-              className="
-                w-full
-                h-24
-                md:h-28
-                lg:h-36
-                xl:h-40
-                2xl:h-44
-                object-cover
-                rounded-t-xl
-              "
+              className="w-full h-40 md:h-48 lg:h-52 xl:h-56 object-cover"
             />
 
-            <div className="p-3 text-center flex-grow flex flex-col justify-center">
-              <h2 className="text-sm md:text-lg lg:text-xl xl:text-2xl font-semibold">
+            <div className="p-4 text-center flex flex-col gap-2">
+              <h2 className="text-lg md:text-xl lg:text-2xl font-semibold">
                 {issue.title}
               </h2>
-              <p className="text-[11px] md:text-sm lg:text-base xl:text-lg text-blue-900">
+
+              <p className="text-sm md:text-base lg:text-lg text-blue-900">
                 {issue.desc}
               </p>
             </div>
@@ -89,15 +77,13 @@ function IssueList() {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center mt-6 space-x-3">
+      <div className="flex justify-center mt-8 gap-3">
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i + 1}
             onClick={() => setCurrentPage(i + 1)}
             className={`
-              px-4 py-2
-              text-sm lg:text-base
-              rounded
+              px-4 py-2 rounded-md text-sm md:text-base
               ${
                 currentPage === i + 1
                   ? "bg-blue-600 text-white"
