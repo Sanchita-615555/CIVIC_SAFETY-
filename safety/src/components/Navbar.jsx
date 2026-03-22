@@ -7,7 +7,7 @@ function Navbar() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setOpen(false); // mobile menu close after click
+      setOpen(false);
     }
   };
 
@@ -22,58 +22,48 @@ function Navbar() {
   return (
     <nav
       className="w-full
-                 flex items-center justify-between
-                 py-1 px-6
+                 flex flex-col md:flex-row md:items-center md:justify-between
+                 px-6 lg:px-12 py-3
                  bg-blue-200/90 backdrop-blur-md
                  shadow-md"
     >
-      {/* Left side: Logo + Text */}
-      <div className="flex items-center gap-2 whitespace-nowrap">
-        <img src="/civic.png" alt="Logo" className="w-6 h-6 rounded-full" />
-        <span className="font-bold text-lg text-blue-700">Civic Safety</span>
-      </div>
+      {/* Top Row */}
+      <div className="flex items-center justify-between w-full md:w-auto">
+        <div className="flex items-center gap-3">
+          <img src="/civic.png" alt="Logo" className="w-8 h-8 rounded-full" />
+          <span className="font-bold text-lg md:text-xl text-blue-700">
+            Civic Safety
+          </span>
+        </div>
 
-      {/* Desktop Menu */}
-      <div className="hidden md:flex flex-wrap gap-6 text-sm">
-        {links.map((link) => (
-          <button
-            key={link.id}
-            onClick={() => handleScroll(link.id)}
-            className="hover:text-blue-600 transition"
-          >
-            {link.name}
-          </button>
-        ))}
-      </div>
-
-      {/* Mobile Hamburger */}
-      <div className="md:hidden">
+        {/* Mobile Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="text-blue-700 text-2xl"
+          className="md:hidden text-blue-700 text-2xl"
         >
-          ☰
+          {open ? "✕" : "☰"}
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden absolute top-full left-0 w-full
-                        bg-blue-200/90 backdrop-blur-md shadow-md">
-          <ul className="flex flex-col px-6 py-3 gap-3 text-sm">
-            {links.map((link) => (
-              <li key={link.id}>
-                <button
-                  onClick={() => handleScroll(link.id)}
-                  className="w-full text-left hover:text-blue-600 transition"
-                >
-                  {link.name}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {/* Menu */}
+      <div
+        className={`w-full md:w-auto transition-all duration-300 
+                    ${open ? "block mt-4" : "hidden md:flex"}
+                    md:mt-0`}
+      >
+        <ul className="flex flex-col md:flex-row gap-4 md:gap-8 text-base md:text-sm">
+          {links.map((link) => (
+            <li key={link.id}>
+              <button
+                onClick={() => handleScroll(link.id)}
+                className="w-full text-left md:text-center hover:text-blue-600 transition"
+              >
+                {link.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 }
