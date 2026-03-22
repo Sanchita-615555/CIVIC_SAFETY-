@@ -40,11 +40,13 @@ function IssueList() {
       </div>
 
       {/* Grid */}
-      <div className="
-        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+      <div
+        className="
+        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
         gap-8
-        w-full max-w-[1500px] mx-auto flex-grow
-      ">
+        w-full max-w-[1700px] mx-auto flex-grow
+      "
+      >
         {currentItems.map((issue) => (
           <div
             key={issue.id}
