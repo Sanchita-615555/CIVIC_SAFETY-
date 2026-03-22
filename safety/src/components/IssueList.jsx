@@ -41,9 +41,9 @@ function IssueList() {
 
       {/* Grid */}
       <div className="
-        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
-        gap-6
-        w-full max-w-[1600px] mx-auto flex-grow
+        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+        gap-8
+        w-full max-w-[1500px] mx-auto flex-grow
       ">
         {currentItems.map((issue) => (
           <div
@@ -52,7 +52,7 @@ function IssueList() {
               bg-white
               rounded-2xl
               shadow-lg
-              hover:shadow-2xl hover:-translate-y-2
+              hover:shadow-2xl hover:-translate-y-3
               transition-all duration-300
               flex flex-col overflow-hidden
             "
@@ -60,15 +60,15 @@ function IssueList() {
             <img
               src={issue.img}
               alt={issue.title}
-              className="w-full h-40 md:h-48 lg:h-52 xl:h-56 object-cover"
+              className="w-full h-48 md:h-56 lg:h-64 xl:h-72 object-cover"
             />
 
-            <div className="p-4 text-center flex flex-col gap-2">
-              <h2 className="text-lg md:text-xl lg:text-2xl font-semibold">
+            <div className="p-5 lg:p-6 xl:p-7 text-center flex flex-col gap-2">
+              <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold">
                 {issue.title}
               </h2>
 
-              <p className="text-sm md:text-base lg:text-lg text-blue-900">
+              <p className="text-sm md:text-base lg:text-lg xl:text-xl text-blue-900">
                 {issue.desc}
               </p>
             </div>
