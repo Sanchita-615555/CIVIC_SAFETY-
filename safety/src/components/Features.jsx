@@ -21,8 +21,7 @@ function Features() {
       id="features"
       className="
         bg-gradient-to-b
-        from-yellow-300
-        to-yellow-200
+       from via-orange-300 to-yellow-200
         px-6 lg:px-16
         py-20
       "
