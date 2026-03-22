@@ -17,7 +17,6 @@ const ContactPage = () => {
     }
 
     try {
-      // Use deployed backend URL
       const res = await fetch(
         "https://civic-safety-2.onrender.com/api/contact",
         {
@@ -38,161 +37,138 @@ const ContactPage = () => {
   return (
     <section
       id="contact"
-      className="h-screen w-full bg-green-200 flex flex-col items-center p-2 overflow-hidden"
+      className="min-h-screen w-full bg-green-200 px-4 md:px-10 py-10 flex flex-col items-center"
     >
-      {/* Page Heading */}
-      <div className="mb-1 w-full flex justify-center flex-none">
-        <h1 className="text-xl md:text-2xl font-bold text-center italic">
-          STAY SAFE, STAY ALERT
-        </h1>
-      </div>
+      {/* Heading */}
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold italic mb-8 text-center">
+        STAY SAFE, STAY ALERT
+      </h1>
 
-      {/* Main Content */}
-      <div className="flex-1 w-full max-w-6xl flex gap-3">
-        {/* Left: Form + Emergency */}
-        <div className="flex-1 flex flex-col gap-1">
-          {/* Emergency Numbers */}
-          <div className="flex justify-between gap-1 flex-none">
-            <div className="flex flex-col items-center bg-blue-100 p-1 rounded flex-1 text-center text-xs">
-              <span className="text-lg mb-0.5">👮‍♂</span>
-              <p className="font-semibold text-sm">Police</p>
-              <p className="text-xs">112</p>
+      {/* Main Container */}
+      <div className="w-full max-w-7xl grid md:grid-cols-2 gap-8">
+
+        {/* LEFT SIDE */}
+        <div className="flex flex-col gap-6">
+
+          {/* Emergency Cards */}
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-blue-100 p-4 rounded-xl text-center shadow">
+              <p className="text-2xl">👮‍♂</p>
+              <p className="font-semibold">Police</p>
+              <p>112</p>
             </div>
-            <div className="flex flex-col items-center bg-red-100 p-1 rounded flex-1 text-center text-xs">
-              <span className="text-lg mb-0.5">🔥</span>
-              <p className="font-semibold text-sm">Fire</p>
-              <p className="text-xs">101</p>
+
+            <div className="bg-red-100 p-4 rounded-xl text-center shadow">
+              <p className="text-2xl">🔥</p>
+              <p className="font-semibold">Fire</p>
+              <p>101</p>
             </div>
-            <div className="flex flex-col items-center bg-green-100 p-1 rounded flex-1 text-center text-xs">
-              <span className="text-lg mb-0.5">🚑</span>
-              <p className="font-semibold text-sm">Ambulance</p>
-              <p className="text-xs">102</p>
+
+            <div className="bg-green-100 p-4 rounded-xl text-center shadow">
+              <p className="text-2xl">🚑</p>
+              <p className="font-semibold">Ambulance</p>
+              <p>102</p>
             </div>
           </div>
 
-          {/* Form */}
+          {/* FORM */}
           <form
             onSubmit={handleSubmit}
-            className="flex-1 flex flex-col gap-1 text-xs overflow-hidden"
+            className="bg-white p-6 rounded-2xl shadow-lg flex flex-col gap-4"
           >
             <input
               type="text"
               name="name"
               placeholder="Name"
-              className="border p-1 rounded-sm flex-none text-xs"
+              className="border p-3 rounded-lg text-sm md:text-base"
               required
             />
+
             <input
               type="text"
               name="location"
               placeholder="Location"
-              className="border p-1 rounded-sm flex-none text-xs"
+              className="border p-3 rounded-lg text-sm md:text-base"
               required
             />
+
             <input
               type="text"
               name="emergencyType"
               placeholder="Type of Emergency"
-              className="border p-1 rounded-sm flex-none text-xs"
+              className="border p-3 rounded-lg text-sm md:text-base"
               required
             />
+
             <textarea
               name="description"
               placeholder="Description"
-              rows="1"
-              className="border p-1 rounded-sm flex-none text-xs"
+              rows="3"
+              className="border p-3 rounded-lg text-sm md:text-base"
               required
             ></textarea>
 
             <button
               type="submit"
-              className="bg-blue-600 text-white py-0.5 rounded hover:bg-blue-700 mt-1 w-full flex-none text-sm h-6"
+              className="bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 text-base font-semibold"
             >
               SUBMIT
             </button>
           </form>
         </div>
 
-        {/* Right: Contact + File Upload */}
-        <div className="flex-1 flex flex-col gap-1">
-          <div className="flex-1 flex flex-col justify-center gap-1 bg-gray-100 p-2 rounded text-xs overflow-hidden">
-            <h3 className="text-lg font-semibold text-center flex-none">
-              Get in Touch
-            </h3>
-            <p className="flex items-center justify-center gap-1 flex-none text-xs">
-              <span>📧</span>
-              <a
-                href="mailto:info@civilsafety.com"
-                className="hover:underline text-blue-600"
-              >
+        {/* RIGHT SIDE */}
+        <div className="flex flex-col gap-6">
+
+          {/* Contact Box */}
+          <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center gap-4 text-center">
+            <h3 className="text-xl font-semibold">Get in Touch</h3>
+
+            <p>
+              📧{" "}
+              <a href="mailto:info@civilsafety.com" className="text-blue-600">
                 info@civilsafety.com
               </a>
             </p>
 
-            {/* Phone */}
-            <p className="flex items-center justify-center gap-1 flex-none text-xs">
-              <span>📞</span>
-              <a
-                href="tel:+919876543210"
-                className="hover:underline text-blue-600"
-              >
+            <p>
+              📞{" "}
+              <a href="tel:+919876543210" className="text-blue-600">
                 +91-98765-43210
               </a>
             </p>
 
-            {/* Location */}
-            <p className="flex items-center justify-center gap-1 flex-none text-xs">
-              <span>📍</span>
+            <p>
+              📍{" "}
               <a
-                href="https://www.google.com/maps/search/?api=1&query=1234+Safety+St,+Kolkata,+WB"
+                href="https://www.google.com/maps/search/?api=1&query=Kolkata"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline text-blue-600"
+                className="text-blue-600"
               >
-                1234 Safety St, Kolkata, WB
+                Kolkata, West Bengal
               </a>
             </p>
 
-            <div className="flex justify-center gap-3 mt-1 flex-none">
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/facebook.png" alt="Facebook" className="w-4 h-4" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/twitter.png" alt="Twitter" className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/instagram.png" alt="Instagram" className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/linkedin.png" alt="LinkedIn" className="w-4 h-4" />
-              </a>
+            {/* Social Icons */}
+            <div className="flex gap-4 mt-2">
+              <img src="/facebook.png" className="w-6 h-6" />
+              <img src="/twitter.png" className="w-6 h-6" />
+              <img src="/instagram.png" className="w-6 h-6" />
+              <img src="/linkedin.png" className="w-6 h-6" />
             </div>
           </div>
 
-          <div className="border-2 border-gray-300 bg-gray-100 rounded p-1 mt-1 flex-none">
-            <h3 className="font-semibold mb-1 text-xs">Upload Image / Video</h3>
+          {/* Upload Box */}
+          <div className="bg-white p-6 rounded-2xl shadow-lg">
+            <h3 className="font-semibold mb-3">Upload Image / Video</h3>
+
             <input
               type="file"
               id="fileUpload"
               name="file"
-              accept="image/,video/"
-              className="text-xs w-full cursor-pointer"
+              accept="image/*,video/*"
+              className="w-full"
             />
           </div>
         </div>
