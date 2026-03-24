@@ -149,13 +149,23 @@ const ContactPage = () => {
                 Kolkata, West Bengal
               </a>
             </p>
+           {/* Social Icons */}         
+           <div className="flex gap-4 mt-2">
+  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+    <img src="/facebook.png" className="w-6 h-6 cursor-pointer" />
+  </a>
 
-            {/* Social Icons */}
-            <div className="flex gap-4 mt-2">
-              <img src="/facebook.png" className="w-6 h-6" />
-              <img src="/twitter.png" className="w-6 h-6" />
-              <img src="/instagram.png" className="w-6 h-6" />
-              <img src="/linkedin.png" className="w-6 h-6" />
+  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+    <img src="/twitter.png" className="w-6 h-6 cursor-pointer" />
+  </a>
+
+  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+    <img src="/instagram.png" className="w-6 h-6 cursor-pointer" />
+  </a>
+
+  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+    <img src="/linkedin.png" className="w-6 h-6 cursor-pointer" />
+  </a>
             </div>
           </div>
 
